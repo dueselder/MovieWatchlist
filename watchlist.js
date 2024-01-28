@@ -14,14 +14,19 @@ document.addEventListener('click', (e) => {
 
 function renderWatchlist () {
     const watchlist = localStorage.getItem('watchlist') 
-
-    try {
-        const watchlistData = JSON.parse(watchlist)
-        renderMovies(watchlistData)
-    } catch (error) {
-        console.log('Error parsing watchlist data', error)
-        document.getElementById('movie-list').innerHTML = '<p>Error loading watchlist data</p>'
+    if (!watchlist) {
+        
+        return
+    } else {
+        try {
+            const watchlistData = JSON.parse(watchlist)
+            renderMovies(watchlistData)
+        } catch (error) {
+            console.log('Error parsing watchlist data', error)
+            document.getElementById('movie-list').innerHTML = '<p>Error loading watchlist data</p>'
+        }
     }
+
 }
 
 function renderMovies (movieData) {
