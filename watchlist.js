@@ -14,8 +14,7 @@ document.addEventListener('click', (e) => {
 
 function renderWatchlist () {
     const watchlist = localStorage.getItem('watchlist') 
-    if (!watchlist) {
-        
+    if (!watchlist || watchlist.length < 1) {
         return
     } else {
         try {

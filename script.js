@@ -19,7 +19,12 @@ document.addEventListener('click', (e) => {
 searchInput.addEventListener('keyup', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault();
+        if(searchInput.value === '') {
+            
+            return
+        } else {
         handleSearchClick();
+        }
     }
 });
 
