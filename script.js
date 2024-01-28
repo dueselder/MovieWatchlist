@@ -1,7 +1,7 @@
 import { showMessage } from './utility.js';
 
 const apiKey = 'cd39d31c';
-const omdbApiUrl = 'http://www.omdbapi.com/';
+const omdbApiUrl = 'https://www.omdbapi.com/';
 const searchBtn = document.getElementById('search-button');
 const searchInput = document.getElementById('search-input');
 const movieList = document.getElementById('movie-list');
