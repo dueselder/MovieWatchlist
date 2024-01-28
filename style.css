@@ -372,4 +372,8 @@ main {
     font-size: 0.875rem;
   }
 
+  #empty-watchlist {
+    margin: 0 2rem;
+  }
+
 }
